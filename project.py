@@ -1,7 +1,10 @@
-from src.fred_client import get_yields_AAA
-from src.graham_valuation import get_intrinsic_value
-from src.graham_valuation import worth_it
-from src.validators import get_decimal, get_number
+from src import (
+    get_yields_AAA,
+    get_intrinsic_value,
+    worth_it,
+    get_number,
+    get_decimal
+)
 
 DEFAULT_ACTUAL_YIELD = 5.76
 DEFAULT_AVERAGE_YIELD = 3.97 
