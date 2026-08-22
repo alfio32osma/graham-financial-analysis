@@ -12,7 +12,7 @@ def test_get_yields_AAA():
             {"value": "5"}
         ]
     }
-    with patch("project.requests.get") as mock_get:
+    with patch("src.fred_client.requests.get") as mock_get:
         mock_get.return_value.json.return_value = false_data
         result = get_yields_AAA()
 
@@ -30,7 +30,7 @@ def test_get_yields_AAA_error():
             {"value": "ant"}
             ]
         }
-    with patch("project.requests.get") as mock_get:
+    with patch("src.fred_client.requests.get") as mock_get:
         mock_get.return_value.json.return_value = false_data
 
         with pytest.raises(ValueError, match="Is not a number"):
